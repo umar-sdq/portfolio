@@ -1,0 +1,140 @@
+.contact-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  color: white;
+  position: relative;
+  padding-bottom: 4rem;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background like About/Projects */
+.luxury-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 40% 30%, rgba(255,215,0,0.12), transparent 70%),
+              radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05), transparent 70%);
+  filter: blur(25px);
+  z-index: 0;
+}
+.animated-shapes::before,
+.animated-shapes::after {
+  content: '';
+  position: absolute;
+  border: 1px solid rgba(255,215,0,0.15);
+  border-radius: 50%;
+  width: 380px;
+  height: 380px;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 35s linear infinite;
+  z-index: 0;
+}
+.animated-shapes::after {
+  width: 260px;
+  height: 260px;
+  top: 70%;
+  left: 40%;
+  animation-duration: 45s;
+}
+@keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+/* Header */
+.contact-header {
+  text-align: center;
+  padding-top: 6rem;
+  position: relative;
+  z-index: 2;
+}
+.contact-header h1 {
+  font-size: 3rem;
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+}
+.contact-subtitle {
+  color: #d3d3d3;
+  font-size: 1.2rem;
+}
+
+/* MAIN CARD */
+.contact-card {
+  width: 95%;
+  max-width: 750px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,215,0,0.18);
+  box-shadow: 0 0 25px rgba(255,215,0,0.12);
+  position: relative;
+  z-index: 2;
+}
+
+/* ROWS */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255,215,0,0.15);
+}
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.contact-icon {
+  font-size: 2.1rem;
+  color: #FFD700;
+}
+
+.contact-row h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #FFD700;
+}
+
+.contact-row a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+.contact-row a:hover {
+  color: #FFD700;
+  opacity: 1;
+}
+
+/* Footer */
+.contact-footer {
+  text-align: center;
+  padding-top: 2rem;
+  color: #cfcfcf;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  position: relative;
+  z-index: 2;
+}
+
+.page-fade {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+@keyframes fadeIn { to { opacity: 1; } }
+
+@media (max-width: 600px) {
+  .contact-icon {
+    font-size: 1.6rem;
+  }
+  .contact-row {
+    gap: 1rem;
+  }
+  .contact-card {
+    padding: 1.8rem;
+  }
+}

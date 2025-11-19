@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import './About.css'
 import logo from '../../assets/logo-umar.png'
 import psg from '../../assets/psg.jpg'
 import habs from '../../assets/habs.jpg'
 import react from '../../assets/react.svg'
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
 
   const [slideIndex, setSlideIndex] = useState(0)
-
+  const navaigate = useNavigate();
   useEffect(() => {
     const interval = setInterval(() => {
       setSlideIndex(prev => (prev + 1) % 2) 
@@ -16,6 +17,12 @@ const About = () => {
 
     return () => clearInterval(interval)
   }, [])
+  const onClickContact = () => {
+    navaigate('/contact');
+  }
+  const onClickProjects = () => {
+    navaigate('/projects');
+  }
 
 
   return (
@@ -25,7 +32,7 @@ const About = () => {
 
       <section className="intro">
         <img src={logo} alt="Umar Siddiqui Logo" className="logo" />
-        <h1><span>Umar Siddiqui</span></h1>
+<h1 className="page-load">Umar <span>Siddiqui</span></h1>
 <p className="subtitle">Full Stack Developer — Student in Application Development</p>
 
 
@@ -34,8 +41,8 @@ const About = () => {
           I focus on designing elegant, efficient, and scalable digital experiences that merge creativity with technology.
         </p>
         <div className="actions">
-          <button className="btn-gold">Contact Me</button>
-          <button className="btn-outline">Projects</button>
+          <button className="btn-gold" onClick={onClickContact}>Contact Me</button>
+          <button className="btn-outline" onClick={onClickProjects}>Projects</button>
         </div>
       </section>
 
@@ -89,7 +96,14 @@ const About = () => {
         <p>
           I’m open to internships, junior developer positions, and collaborations on full-stack applications.
         </p>
-        <a href="/Umar_Siddiqui_CV.pdf" className="btn-gold download">Download Resume</a>
+       <a
+  href="/Umar_Siddiqui_CV.pdf"
+  className="btn-gold download"
+  download="Umar_Siddiqui_CV.pdf"
+>
+  Download Resume
+</a>
+
       </section>
 
 
@@ -152,7 +166,7 @@ const About = () => {
           I’m always open to new opportunities and creative conversations.
         </p>
         <div className="actions">
-          <button className="btn-gold">Get in Touch</button>
+          <button className="btn-gold" onClick={onClickContact}>Get in Touch</button>
         </div>
       </section>
 
