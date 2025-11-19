@@ -72,7 +72,11 @@
   animation: logoGlow 5s ease-in-out infinite alternate;
   z-index: 3;        
   display: block;    
+  font-family: 'Playfair Display', serif;
+
 }
+
+
 @keyframes logoGlow {
   from { filter: drop-shadow(0 0 15px rgba(255,215,0,0.4)); }
   to { filter: drop-shadow(0 0 35px rgba(255,215,0,0.8)); }
@@ -629,4 +633,23 @@
 .luxury-bg,
 .animated-shapes {
   pointer-events: none;
+}
+
+body, * {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+p, span, a {
+  font-family: 'Outfit', sans-serif;
+}
+
+
+
+
+.intro h1,
+.intro h1 span {
+  font-family: 'Playfair Display', serif !important;
 }

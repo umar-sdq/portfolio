@@ -49,7 +49,6 @@ https://github.com/umar-sdq            </a>
         </div>
       </div>
 
-      {/* FOOTER */}
       <footer className="contact-footer">
         © 2025 Umar Siddiqui — All rights reserved
       </footer>
