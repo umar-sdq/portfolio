@@ -44,8 +44,7 @@ const Contact = () => {
               href="https://github.com/umar-sdq"
               target="_blank"
             >
-              linkedin.com/in/umar-siddiqui
-            </a>
+https://github.com/umar-sdq            </a>
           </div>
         </div>
       </div>

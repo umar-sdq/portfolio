@@ -111,7 +111,7 @@ const About = () => {
         <h2>Why I Code</h2>
           
         <p>
-          Back when i was a kid, I used to play Grand Theft Auto alot, and was fascinated by how the game worked behind the scenes.
+          Back when I was a kid, I used to play Grand Theft Auto a lot, and was fascinated by how the game worked behind the scenes.
           This curiosity sparked my interest in programming.
           For me, programming is a creative process that merges logic and art. I enjoy designing smooth interfaces,
           solving complex problems, and learning something new with every line of code.
